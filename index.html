@@ -242,17 +242,21 @@
       }
 
       .petals.foreground .petal {
-        opacity: 0.44;
+        opacity: 0.46;
         filter: blur(0.2px);
         box-shadow: 0 0 10px rgba(164, 76, 98, 0.06);
       }
 
-      .petals.foreground .petal:nth-child(1) { left: 12%; animation-duration: 14s; animation-delay: -3s; width: 16px; }
-      .petals.foreground .petal:nth-child(2) { left: 36%; animation-duration: 16s; animation-delay: -9s; width: 14px; }
-      .petals.foreground .petal:nth-child(3) { left: 58%; animation-duration: 13s; animation-delay: -6s; width: 18px; }
-      .petals.foreground .petal:nth-child(4) { left: 82%; animation-duration: 15s; animation-delay: -11s; width: 15px; }
-      .petals.foreground .petal:nth-child(5) { left: 24%; animation-duration: 17s; animation-delay: -12s; width: 13px; }
-      .petals.foreground .petal:nth-child(6) { left: 69%; animation-duration: 14s; animation-delay: -8s; width: 17px; }
+      .petals.foreground .petal:nth-child(1) { left: 10%; animation-duration: 14s; animation-delay: -3s; width: 16px; }
+      .petals.foreground .petal:nth-child(2) { left: 28%; animation-duration: 16s; animation-delay: -9s; width: 14px; }
+      .petals.foreground .petal:nth-child(3) { left: 40%; animation-duration: 13s; animation-delay: -6s; width: 18px; }
+      .petals.foreground .petal:nth-child(4) { left: 52%; animation-duration: 15s; animation-delay: -11s; width: 15px; }
+      .petals.foreground .petal:nth-child(5) { left: 64%; animation-duration: 17s; animation-delay: -12s; width: 13px; }
+      .petals.foreground .petal:nth-child(6) { left: 78%; animation-duration: 14s; animation-delay: -8s; width: 17px; }
+      .petals.foreground .petal:nth-child(7) { left: 34%; animation-duration: 15s; animation-delay: -5s; width: 14px; opacity: 0.42; }
+      .petals.foreground .petal:nth-child(8) { left: 47%; animation-duration: 18s; animation-delay: -13s; width: 16px; opacity: 0.48; }
+      .petals.foreground .petal:nth-child(9) { left: 58%; animation-duration: 13s; animation-delay: -10s; width: 12px; opacity: 0.4; }
+      .petals.foreground .petal:nth-child(10) { left: 72%; animation-duration: 16s; animation-delay: -7s; width: 15px; opacity: 0.44; }
 
       .petal {
         position: absolute;
@@ -1161,6 +1165,40 @@
         .petal {
           opacity: 0.72;
         }
+
+        .petals.foreground .petal:nth-child(1) { left: 10%; }
+        .petals.foreground .petal:nth-child(2) { left: 22%; }
+        .petals.foreground .petal:nth-child(3) { left: 34%; }
+        .petals.foreground .petal:nth-child(4) { left: 46%; }
+        .petals.foreground .petal:nth-child(5) { left: 58%; }
+        .petals.foreground .petal:nth-child(6) { left: 70%; }
+        .petals.foreground .petal:nth-child(7) { left: 26%; }
+        .petals.foreground .petal:nth-child(8) { left: 38%; }
+        .petals.foreground .petal:nth-child(9) { left: 50%; }
+        .petals.foreground .petal:nth-child(10) { left: 62%; }
+
+        .petals:not(.foreground) .petal:nth-child(4) { left: 52%; }
+        .petals:not(.foreground) .petal:nth-child(5) { left: 64%; }
+        .petals:not(.foreground) .petal:nth-child(6) { left: 78%; }
+        .petals:not(.foreground) .petal:nth-child(10) { left: 60%; }
+        .petals:not(.foreground) .petal:nth-child(11) { left: 72%; }
+        .petals:not(.foreground) .petal:nth-child(12) { left: 86%; }
+        .petals:not(.foreground) .petal:nth-child(22) { left: 62%; }
+        .petals:not(.foreground) .petal:nth-child(23) { left: 70%; }
+        .petals:not(.foreground) .petal:nth-child(24) { left: 80%; }
+        .petals:not(.foreground) .petal:nth-child(25) { left: 88%; }
+        .petals:not(.foreground) .petal:nth-child(26) { left: 95%; }
+      }
+
+      @media (max-width: 640px) {
+        @keyframes floatDown {
+          0% {
+            transform: translate3d(0, -10vh, 0) rotate(0deg);
+          }
+          100% {
+            transform: translate3d(38px, 115vh, 0) rotate(340deg);
+          }
+        }
       }
     </style>
   </head>
@@ -1220,6 +1258,10 @@
       <span class="petal"></span>
     </div>
     <div class="petals foreground" aria-hidden="true">
+      <span class="petal"></span>
+      <span class="petal"></span>
+      <span class="petal"></span>
+      <span class="petal"></span>
       <span class="petal"></span>
       <span class="petal"></span>
       <span class="petal"></span>
@@ -1388,7 +1430,7 @@
       <section class="frame footer-note reveal">
         <div class="ornament">#RivachiForever</div>
         <p>
-          With warm wishes and folded hands, the family invites you to celebrate love, tradition, and togetherness.
+          With warm wishes and folded hands, we invite you to celebrate love, tradition, and togetherness.
         </p>
       </section>
     </main>
